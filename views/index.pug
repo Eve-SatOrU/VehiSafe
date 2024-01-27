@@ -1,0 +1,38 @@
+//- doctype html
+//- html
+//-   head
+//-     title Connected Cars Simulation
+//-     link(rel='stylesheet', href='/static/style.css')
+//-   body
+//-     h1 Connected Cars Simulation
+//-     each car in cars
+//-       .car(class=collidedCars.includes(car) ? 'collision' : '')
+//-         p Car ID: #{car.id}
+//-         p Location: #{car.location.latitude.toFixed(2)}, #{car.location.longitude.toFixed(2)}
+//-         p Speed: #{car.speed.toFixed(2)} km/h
+
+//-     script.
+//-       setTimeout(() => {
+//-         location.reload();
+//-       }, 2000);
+doctype html
+html
+  head
+    title Connected Cars Simulation
+    link(rel='stylesheet', href='/static/style.css')
+  body
+    header
+      h1 Connected Cars Simulation
+
+    .container
+      each car in cars
+        .car(class=collidedCars.includes(car) ? 'collision' : '')
+          .car-info
+            h2 Car ID: #{car.id}
+            p Location: #{car.location.latitude.toFixed(2)}, #{car.location.longitude.toFixed(2)}
+            p Speed: #{car.speed.toFixed(2)} km/h
+
+    script.
+      setTimeout(() => {
+        location.reload();
+      }, 2000);
