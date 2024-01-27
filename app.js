@@ -7,10 +7,12 @@ const port = 3000;
 
 let collidedCars = [];
 
-app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, 'views'));
 
-app.use('/static', express.static(path.join(__dirname, 'public')));
+
+app.set("view engine", "pug");
+app.set("views", "views");
+app.use(express.urlencoded({ extended: false }));
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
   res.render('index', { cars, collidedCars });
