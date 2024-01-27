@@ -3,10 +3,10 @@ html
   head
     title Connected Cars Simulation
     link(rel='stylesheet', href='./css/style.css')
-  body
+  body(style='background-image: url("https://cdn.pixabay.com/photo/2015/05/28/23/12/auto-788747_1280.jpg"); background-size: cover; animation: backgroundAnimation 10s infinite;')
     header
-      h1 Connected Cars Simulation
-
+      h1 VehiSafe
+    h3 Connected Cars Simulation
     .container
       each car in cars
         .car(class=collidedCars.includes(car) ? 'collision' : '')

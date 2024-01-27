@@ -1,38 +1,69 @@
+
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa; /* Light gray background */
-    margin: 0;
-    padding: 0;
-  }
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
   
-  header {
-    background-color: #007bff; /* Primary blue header background color */
-    color: #fff; /* White header text color */
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-  }
-  
-  .car {
-    border: 1px solid #ced4da;
-    border-radius: 8px;
-    background-color: #fff; /* White background for cars */
-    margin: 10px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow for cards */
-    transition: background-color 0.5s ease; /* Smooth transition for background color change */
-  }
-  
-  .collision {
-    background-color: #ffc107; /* Yellow background for collided car */
-  }  
-  /* h1 {
-    color :#007bff;
-  } */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); /* Adjust the alpha value (0.5) for the desired transparency */
+  z-index: -1; /* Place the overlay behind the content */
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 0.4em;
+}
+
+header h1{
+  text-align: left;
+  font-family: 'rozha';
+}
+h3 {
+  text-align: center;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.car {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 15px;
+  width: 200px;
+}
+
+.collision {
+  border-color: #ff0000; 
+}
+
+.car-info {
+  text-align: center;
+}
+
+.car-info p {
+  font-weight: bold; 
+}
+
+.car-info p:nth-child(2) {
+  color: blue; 
+}
